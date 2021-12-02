@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   # Validations
 
+  validates :username, :presence => true
+
   validates :username, :exclusion => { :in => [ "qwerty", "abcdef" ]  }
 
   # Scopes
