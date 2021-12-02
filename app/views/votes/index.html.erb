@@ -34,6 +34,10 @@
       <div class="list-group list-group-flush">
         <%= render collection: @votes, partial: "list_item", as: :vote %>
       </div>
+      <div class="card-footer d-flex justify-content-center">
+        <%= paginate @votes, theme: 'twitter-bootstrap-4' %>
+      </div>
+
     </div>
   </div>
 </div>
