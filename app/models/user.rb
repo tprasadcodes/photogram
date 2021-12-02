@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
-  # Direct associations
+  
+  include JwtToken
+# Direct associations
 
   has_many   :received_friend_requests,
              :class_name => "FriendRequest",
